@@ -16,7 +16,12 @@
         <script>
             function checkAge(){
                 var Age = document.getElementById("Age").value;
-        if(Age < 18){
+
+        if (isNan(Age) || Age < 0 ){
+            alert("Please input a valid number");
+        }
+
+        else if(Age < 18){
             alert("You are underage.");
         }
         else if(Age > 18){
